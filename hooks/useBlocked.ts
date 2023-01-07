@@ -7,7 +7,7 @@ import { setBlocked } from "../redux/appSlice";
 export function useBlocked() {
   const dispatch = useAppDispatch();
   const [ip, setIp] = useState();
-  const isBlocked = useAppSelector(getBlocked(ip));
+  const isBlocked = false;
 
   const getIp = async () => {
     const ipInfo = await fetch("https://brrr.burrow.cash/api/ip").then((r) => r.json());

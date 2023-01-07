@@ -1,13 +1,14 @@
 import { ConnectConfig } from "near-api-js";
 
-export const LOGIC_CONTRACT_NAME = process.env.NEXT_PUBLIC_CONTRACT_NAME as string;
+export const LOGIC_CONTRACT_NAME = 'contract.main.burrow.near';
 export const DUST_THRESHOLD = 0.001;
 
 export const hiddenAssets = ["ref.fakes.testnet", "meta-token.near"];
 
-export const defaultNetwork = (process.env.NEXT_PUBLIC_DEFAULT_NETWORK ||
-  process.env.NODE_ENV ||
-  "development") as any;
+// export const defaultNetwork = (process.env.NEXT_PUBLIC_DEFAULT_NETWORK ||
+//   process.env.NODE_ENV ||
+//   "development") as any;
+export const defaultNetwork = 'mainnet';
 
 const META_TOKEN = { testnet: undefined, mainnet: "meta-token.near" };
 const REF_TOKEN = { testnet: "ref.fakes.testnet", mainnet: "token.v2.ref-finance.near" };
